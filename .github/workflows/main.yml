@@ -16,10 +16,9 @@ on:
                 required: false
                 type: boolean
 jobs:
-    run-manual:
+    say_hello:
         runs-on: ubuntu-latest
         steps:
-            - name: Print inputs
-                run: |
-                    echo "Log level: ${{ inputs.logLevel }}"
-                    echo "Run tags: ${{ inputs.tags }}"
+        - run: |
+           echo "Log level: ${{ inputs.logLevel }}"
+           echo "Run tags: ${{ inputs.tags }}"
