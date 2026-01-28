@@ -1,24 +1,13 @@
-name: CI/CD Pipeline
+name: Learn GitHub Actions
+
 on:
-    workflow_dispatch:
-        inputs:
-            logLevel:
-                description: 'Log level'
-                required: true
-                default: 'warning'
-                type: choice
-                options:
-                    - infoe
-                    - warning
-                    - debug
-            tags:
-                description: 'Test scenario tags'
-                required: false
-                type: boolean
+  push:
+    branches: ["main"]
+
 jobs:
-    say_hello:
-        runs-on: ubuntu-latest
-        steps:
-        - run: |
-            echo "Log level: ${{ inputs.logLevel }}"
-            echo "Run tags: ${{ inputs.tags }}"
+  build:
+    runs-on:ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, World!
