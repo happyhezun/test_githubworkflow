@@ -13,5 +13,5 @@ jobs:
         run: echo Hello, World!
 
     steps:
-      - name: Run a one-line script
+      - name: Run other one-line script
         run: echo Hello, World2!
