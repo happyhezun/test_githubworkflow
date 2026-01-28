@@ -16,7 +16,7 @@ on:
                 required: false
                 type: boolean
 jobs:
-    say_hello:
+    run-manual:
         runs-on: ubuntu-latest
         steps:
             - name: Print inputs
