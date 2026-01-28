@@ -19,7 +19,7 @@ jobs:
     say_hello:
         runs-on: ubuntu-latest
         steps:
-        - name: Print inputs
-            run: |
-                echo "Log level: ${{ inputs.logLevel }}"
-                echo "Run tags: ${{ inputs.tags }}"
+            - name: Print inputs
+                run: |
+                    echo "Log level: ${{ inputs.logLevel }}"
+                    echo "Run tags: ${{ inputs.tags }}"
