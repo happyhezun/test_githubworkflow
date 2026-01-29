@@ -9,9 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Use secure variable
+        env:
+          MY_HOST_IP: ${{ secrets.HOST_IP }}
       - name: Run a one-line script
         run: echo Hello, World!
       - name: Run a one-line script
         run: echo Hello, World2!
       - name: Use configuration variable
-        run: echo "The URL is ${{ secrets.HOST_IP }}" 
+        run: echo "The URL is $MY_HOST_IP" 
