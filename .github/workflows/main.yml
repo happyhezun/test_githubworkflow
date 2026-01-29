@@ -17,4 +17,4 @@ jobs:
         env:
           PORT: ${{ vars.PORT }}
         run: |
-          echo "The URL is : $PORT"
+          echo "The URL test is : $PORT"
