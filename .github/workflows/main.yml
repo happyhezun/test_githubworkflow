@@ -6,6 +6,7 @@ on:
 
 jobs:
   build:
+    environment: test
     runs-on: ubuntu-latest
 
     steps:
@@ -19,4 +20,4 @@ jobs:
         run: |
           echo "The URL test is : $PORT"
       - name: Use Environment variables
-        run: echo "Host is ${{ env.test.HOST }}"
+        run: echo "Host is ${{ env.HOST }}"
