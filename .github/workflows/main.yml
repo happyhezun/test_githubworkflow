@@ -15,5 +15,5 @@ jobs:
         run: echo Hello, World2!
       - name: Use configuration variable
         env:
-          MY_HOST_IP: ${{ secrets.HOST_IP }}
+          MY_HOST_IP: ${{ vars.HOST_IP }}
         run: echo "The URL is $MY_HOST_IP" 
