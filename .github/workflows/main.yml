@@ -16,4 +16,5 @@ jobs:
       - name: Use configuration variable
         env:
           HOST_IP: ${{ vars.HOST_IP }}
-        run: echo "The URL is : $HOST_IP"
+        run: |
+          echo "The URL is : $HOST_IP"
