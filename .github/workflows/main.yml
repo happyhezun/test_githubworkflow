@@ -13,4 +13,5 @@ jobs:
         run: echo Hello, World!
       - name: Run a one-line script
         run: echo Hello, World2!
-
+      - name: Use configuration variable
+        run: echo "The URL is ${{ vars.HOST_IP }}" 
