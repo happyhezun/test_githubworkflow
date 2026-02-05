@@ -1,0 +1,19 @@
+name: Test GitHub Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, World!
+      - name: Run a one-line script
+        run: echo Hello, World2!
+      - name: Use configuration variable
+        env:
+          PORT: ${{ vars.PORT }}
+        run: |
+          echo "The URL test is : $PORT"
